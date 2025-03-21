@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
 
     <link
       rel="icon"
@@ -14,6 +21,50 @@
     <title>Frontend Mentor | Calculator app</title>
   </head>
   <body>
-    
+    <header>
+      <p class="logo">calc</p>
+      <div>
+        <p>Theme</p>
+        <p>Switch button</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="result">
+        <p>399,981</p>
+      </div>
+
+      <div class="operations">
+        <div class="first-row row">
+          <p>7</p>
+          <p>8</p>
+          <p>9</p>
+          <button class="delete-btn">Del</button>
+        </div>
+        <div class="second-row row">
+          <p>4</p>
+          <p>5</p>
+          <p>6</p>
+          <button class="add-btn">+</button>
+        </div>
+        <div class="third-row row">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <button class="decrement-btn">-</button>
+        </div>
+        <div class="fourth-row row">
+          <p>.</p>
+          <p>0</p>
+          <button class="divide-btn">/</button>
+          <button class="multiply-btn">x</button>
+        </div>
+        <div class="fifth-row row">
+          <button class="reset-btn">Reset</button>
+          <button class="equals-btn">=</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
   </body>
 </html>

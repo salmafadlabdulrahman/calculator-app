@@ -1,46 +1,179 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    /*Theme 1*/
-    --dark-blue-main-background: hsl(222, 26%, 31%);
-    --dark-blue-toggle-background: hsl(223, 31%, 20%);
-    --dark-blue-screen-background: hsl(224, 36%, 15%);
-    --dark-blue-key-background: hsl(225, 21%, 49%);
-    --dark-blue-key-shadow: hsl(224, 28%, 35%);
-    --red-background: hsl(6, 63%, 50%);
-    --dark-red-shadow: hsl(6, 70%, 34%);
-    --light-grayish-orange: hsl(30, 25%, 89%);
-    --grayish-orange: hsl(28, 16%, 65%);
-    --dark-grayish-blue: hsl(221, 14%, 31%);
-    --white: hsl(0, 0%, 100%);
+  /*Theme 1*/
+  --dark-blue-main-background: hsl(222, 26%, 31%);
+  --dark-blue-toggle-background: hsl(223, 31%, 20%);
+  --dark-blue-screen-background: hsl(224, 36%, 15%);
+  --dark-blue-key-background: hsl(225, 21%, 49%);
+  --dark-blue-key-shadow: hsl(224, 28%, 35%);
+  --red-background: hsl(6, 63%, 50%);
+  --dark-red-shadow: hsl(6, 70%, 34%);
+  --light-grayish-orange: hsl(30, 25%, 89%);
+  --grayish-orange: hsl(28, 16%, 65%);
+  --dark-grayish-blue: hsl(221, 14%, 31%);
+  --white: hsl(0, 0%, 100%);
 
-    /*Theme 2*/
-    --light-gray-main-background: hsl(0, 0%, 90%);
-    --grayish-red: hsl(0, 5%, 81%);
-    --light-gray: hsl(0, 0%, 93%);
-    --dark-cyan-background: hsl(185, 42%, 37%);
-    --dark-cyan-shadow: hsl(185, 58%, 25%);
-    --orange: hsl(25, 98%, 40%);
-    --dark-orange: hsl(25, 99%, 27%);
-    --light-grayish-yellow: hsl(45, 7%, 89%);
-    --dark-grayish-orange: hsl(35, 11%, 61%);
-    --dark-grayish-yellow: hsl(60, 10%, 19%);
+  /*Theme 2*/
+  --light-gray-main-background: hsl(0, 0%, 90%);
+  --grayish-red: hsl(0, 5%, 81%);
+  --light-gray: hsl(0, 0%, 93%);
+  --dark-cyan-background: hsl(185, 42%, 37%);
+  --dark-cyan-shadow: hsl(185, 58%, 25%);
+  --orange: hsl(25, 98%, 40%);
+  --dark-orange: hsl(25, 99%, 27%);
+  --light-grayish-yellow: hsl(45, 7%, 89%);
+  --dark-grayish-orange: hsl(35, 11%, 61%);
+  --dark-grayish-yellow: hsl(60, 10%, 19%);
 
+  /*Theme 3*/
+  --dark-violet-main-background: hsl(268, 75%, 9%);
+  --dark-violet-toggle-background: hsl(268, 71%, 12%);
+  --dark-violet-background: hsl(281, 89%, 26%);
+  --vivid-magenta: hsl(285, 91%, 52%);
+  --pure-cyan: hsl(176, 100%, 44%);
+  --soft-cyan: hsl(177, 92%, 70%);
+  --dark-violet-key-background: hsl(268, 47%, 21%);
+  --dark-magenta: hsl(290, 70%, 36%);
+  --light-yellow: hsl(52, 100%, 62%);
+  --dark-blue: hsl(198, 20%, 13%);
+}
 
-    /*Theme 3*/
-    --dark-violet-main-background: hsl(268, 75%, 9%);
-    --dark-violet-toggle-background: hsl(268, 71%, 12%);
-    --dark-violet-background: hsl(281, 89%, 26%);
-    --vivid-magenta: hsl(285, 91%, 52%);
-    --pure-cyan: hsl(176, 100%, 44%);
-    --soft-cyan: hsl(177, 92%, 70%);
-    --dark-violet-key-background: hsl(268, 47%, 21%);
-    --dark-magenta: hsl(290, 70%, 36%);
-    --light-yellow: hsl(52, 100%, 62%);
-    --dark-blue: hsl(198, 20%, 13%);
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--dark-blue-main-background);
+  padding: 2em;
+}
 
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  color: var(--white);
+}
+
+header div p {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+main {
+  margin: 0 auto;
+  margin-top: 5em;
+  width: 90%;
+  max-width: 500px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+  color: var(--white);
+  font-size: 1.9em;
+  font-weight: 700;
+}
+
+.result {
+  padding: 1.5em;
+  background-color: var(--dark-blue-screen-background);
+  height: 100px;
+  border-radius: 13px;
+  text-align: right;
+  color: var(--white);
+}
+
+.result p {
+  font-weight: 700;
+  font-size: 2em;
+  margin-top: 0.5em;
+}
+
+.operations {
+  background-color: var(--dark-blue-toggle-background);
+  margin-top: 2em;
+  border-radius: 10px;
+  padding: 2em;
+}
+
+.operations div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.operations div p,
+.add-btn,
+.decrement-btn,
+.divide-btn,
+.multiply-btn {
+  font-size: 1.8em;
+  background-color: var(--light-grayish-orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-grayish-blue);
+  box-shadow: var(--grayish-orange) 0px 5px 0px;
+}
+
+.delete-btn {
+  font-size: 1em;
+}
+
+.delete-btn,
+.reset-btn {
+  box-shadow: var(--dark-blue-key-shadow) 0px 5px 0px;
+  background-color: var(--dark-blue-key-background);
+  color: white;
+  text-transform: uppercase;
+}
+
+.operations div p,
+.delete-btn,
+.add-btn,
+.decrement-btn,
+.divide-btn,
+.multiply-btn {
+  width: 20%;
+  height: 60px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.fifth-row button {
+  width: 47%;
+  color: var(--white);
+  font-size: 1.2em;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  height: 55px;
+}
+
+.reset-btn {
+}
+
+.equals-btn {
+  background-color: var(--red-background);
+  box-shadow: var(--dark-red-shadow) 0px 5px 0px;
+}
+
+@media (max-width: 1200px) {
+  /*main {
+    /*min-width: 700px
+  }*/
 }
