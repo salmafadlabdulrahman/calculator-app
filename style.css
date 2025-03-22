@@ -49,15 +49,10 @@ body {
   padding: 2em;
 }
 
-header {
+header, .theme-container  {
   display: flex;
   justify-content: space-between;
-}
-
-header div {
-  display: flex;
   align-items: center;
-  gap: 1em;
   color: var(--white);
 }
 
@@ -164,13 +159,61 @@ button {
   height: 55px;
 }
 
-.reset-btn {
-}
-
 .equals-btn {
   background-color: var(--red-background);
   box-shadow: var(--dark-red-shadow) 0px 5px 0px;
 }
+
+/*Switch Button*/
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin: 10px;
+}
+
+.toggle-switch .toggle-input {
+  display: none;
+}
+
+.toggle-switch .toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 24px;
+  background-color: var(--dark-blue-screen-background) ;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-switch .toggle-label::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  background-color: var(--red-background);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.theme-one::before {
+  transform: translateX(0px);
+}
+
+.theme-two::before {
+  transform: translateX(16px);
+}
+
+.theme-three::before{
+  transform: translateX(35px);
+}
+
 
 @media (max-width: 1200px) {
   /*main {
